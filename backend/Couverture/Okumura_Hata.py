@@ -45,3 +45,16 @@ class Okumura_Hata:
                 raise ValueError("Erreur : la hauteur de l'antenne de base doit être comprise entre 30 m et 300 m.")
         else:
             raise ValueError("Erreur : la fréquence doit être comprise entre 150 MHz et 1.5 GHz.")
+
+    
+    # Modèle d’Okumura-Hata en environnement Sub-urbain
+
+    def attenuation_moyenne_suburbain(self):
+
+        attenuation_moyenne = self.attenuation_moyenne()
+        div = self.freq / 28 
+        attenuation_moyenne_sub = attenuation_moyenne - 2 * (math.log10(div))**2 - 5.4
+        return attenuation_moyenne_sub
+
+
+
