@@ -1,6 +1,6 @@
 import math
 
-class Cost231Hata:
+class Cost231_Hata:
     def __init__(self, frequency, distance, base_station_height, mobile_station_height, city_size='small'):
         self.frequency = frequency
         self.distance = distance
